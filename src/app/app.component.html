@@ -1,0 +1,32 @@
+<app-popup *ngIf="showWelcomeMessage"></app-popup>
+
+<div *ngIf="!showAbout">
+<div *ngIf="!showWelcomeMessage">
+<div class="options-bar">
+
+  <button (click)="toggleTheme()" aria-label="Toggle Theme">
+    <mat-icon>{{ isDarkMode ? 'brightness_7' : 'brightness_4' }}</mat-icon>
+</button>
+<button (click)="openInfo()" aria-label="Open Info">
+    <mat-icon>info</mat-icon>
+</button>
+<button (click)="refresh()" aria-label="Refresh Counter">
+    <mat-icon>refresh</mat-icon>
+</button>
+
+</div>
+  <div class="div"> 
+  <button (click)="decrementCounter()" *ngIf="counterValue >= 1">-</button>
+  <p  style="flex-grow: 1">{{ counterValue }}</p>
+  <button  *ngIf="counterValue===0" (click)="incrementCounter()">+</button>
+  <button (click)="incrementCounter()" *ngIf="counterValue >= 1">+</button>
+  </div>
+</div>
+</div>
+
+
+<div *ngIf="showAbout" class="about-section">
+  <h2>About This App</h2>
+  <p>This is a simple counter app. You can count, switch between dark and light modes, and more. Stay tuned for new features!</p>
+  <button (click)="closeInfo()">Back</button>
+</div>

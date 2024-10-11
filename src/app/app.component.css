@@ -1,0 +1,86 @@
+.options-bar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.options-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.options-bar button:hover {
+    opacity: 0.7;
+}
+
+mat-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+mat-icon:hover {
+    transform: rotate(180deg);
+}
+
+.about-section {
+    padding: 20px;
+    background-color: transparent; 
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.about-section button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #494a4b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.div {
+    font-size: 10vw; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+    color: gray;
+}
+
+.div button {
+    font-size: 10vw;
+    border: none;
+    background-color: transparent;
+    color: gray;
+}
+
+.div p {
+    text-align: center;
+}
+@media (max-width: 480px) {
+    .div {
+        font-size: 20vw;
+    }
+
+    .div button {
+        font-size: 20vw;
+    }
+
+    .options-bar {
+        top: 10px;
+    }
+}

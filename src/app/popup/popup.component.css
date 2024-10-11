@@ -1,0 +1,23 @@
+.welcome-popup {
+    background-color: transparent;
+    color: gray;
+    text-align: center;
+    padding: 20px;
+    font-size: 5vw; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+    .div {
+        font-size: 15vw;
+    }
+
+    .div button {
+        font-size: 15vw;
+    }
+}
